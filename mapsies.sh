@@ -10,3 +10,10 @@ echo "<h6>" > /var/www/html/theworst.html
 echo The most malicious attempts, at this web server, originate from address $ip. That IP has attempted $attempts times to hack this webserver. Others are listed below. >> /var/www/html/theworst.html
 echo "<hr>" >> /var/www/html/theworst.html
 grep "Invalid" /var/log/auth.log | sed -e 's/.*]:\(.*\)port.*/\1/' | tail -n 100 >> /var/www/html/theworst.html
+
+echo "</h6>" >> /var/www/html/theworst.html
+
+chmod 655 /var/www/html/theworst.html
+
+
+###attack map
