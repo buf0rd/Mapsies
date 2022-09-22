@@ -30,6 +30,8 @@ echo $attackerip >> /tmp/ip.txt
 
 cp /tmp/ip.txt /var/www/html/attacker_ip_list.txt
 
+chmod 655 /var/www/html/attacker_ip_list.txt
+
 python3 /root/PyGeoIpMap/pygeoipmap.py -i /tmp/ip.txt --service m --db /root/GeoLite2-City_20191029/GeoLite2-City.mmdb -o /var/www/html/images/images/theworst.png
 
 fi
